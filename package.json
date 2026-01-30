@@ -1,0 +1,19 @@
+{
+  "name": "jenks-alpha-signals",
+  "version": "1.0.0",
+  "description": "Professional AI-powered trading signals service",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "trading",
+    "signals",
+    "ai",
+    "finance",
+    "alpha"
+  ],
+  "author": "Jenks Alpha Signals LLC",
+  "license": "PROPRIETARY"
+}

@@ -1,0 +1,4 @@
+# Netlify redirects
+/subscribe/* /index.html#pricing 200
+/signals/* /index.html#features 200
+/* /index.html 200
