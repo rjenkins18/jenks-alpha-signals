@@ -1,20 +1,14 @@
 [build]
   publish = "."
 
-# Main site redirects
-[[redirects]]
-  from = "/*"
-  to = "/main/:splat"
-  status = 200
-
-# Crypto subdomain setup
+# Subdomain redirects for crypto platform
 [[redirects]]
   from = "/crypto/*"
   to = "/crypto/:splat"
   status = 200
   force = true
 
-# Course subdomain setup  
+# Subdomain redirects for course platform  
 [[redirects]]
   from = "/course/*"
   to = "/course/:splat"
@@ -30,6 +24,12 @@
 [[redirects]]
   from = "https://course.jenksalpha.com/*"
   to = "/course/:splat"
+  status = 200
+
+# Main platform page redirect (only for /main path, not root)
+[[redirects]]
+  from = "/main/*"
+  to = "/main/:splat"
   status = 200
 
 # Security headers
