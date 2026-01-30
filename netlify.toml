@@ -1,0 +1,42 @@
+[build]
+  publish = "."
+
+# Main site redirects
+[[redirects]]
+  from = "/*"
+  to = "/main/:splat"
+  status = 200
+
+# Crypto subdomain setup
+[[redirects]]
+  from = "/crypto/*"
+  to = "/crypto/:splat"
+  status = 200
+  force = true
+
+# Course subdomain setup  
+[[redirects]]
+  from = "/course/*"
+  to = "/course/:splat"
+  status = 200
+  force = true
+
+# Custom domain redirects (for when domain is configured)
+[[redirects]]
+  from = "https://crypto.jenksalpha.com/*"
+  to = "/crypto/:splat"
+  status = 200
+
+[[redirects]]
+  from = "https://course.jenksalpha.com/*"
+  to = "/course/:splat"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

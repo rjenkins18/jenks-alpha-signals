@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenks Alpha Trading Mastery - Complete Trading Course | $297</title>
+    <meta name="description" content="Master institutional-grade trading strategies with Jenks Alpha Trading Mastery. 13 proven strategies, AI-enhanced signals, professional risk management. $297 course.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            background: #0a0b0f;
+            color: #ffffff;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1b2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.1;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            position: relative; 
+            z-index: 1; 
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #b3b3b3;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 30px 0;
+            display: inline-block;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.3);
+        }
+        
+        .features {
+            background: #111218;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(145deg, #1a1d29, #2a2d3a);
+            padding: 40px 30px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+        
+        .feature-card:hover { 
+            transform: translateY(-10px); 
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .modules {
+            background: #0f1014;
+            padding: 100px 0;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .module-card {
+            background: linear-gradient(145deg, #1a1d29, #2a2d3a);
+            border-radius: 20px;
+            padding: 30px;
+            border-left: 4px solid #4ecdc4;
+        }
+        
+        .module-number {
+            background: #4ecdc4;
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            background: #111218;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .stat-item h3 {
+            font-size: 4rem;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #1a1b2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(145deg, #1a1d29, #2a2d3a);
+            border-radius: 30px;
+            padding: 60px 40px;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 3px solid #4ecdc4;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: 'BEST VALUE';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #4ecdc4;
+            color: #000;
+            padding: 8px 50px;
+            font-weight: 700;
+            transform: rotate(45deg);
+            font-size: 0.9rem;
+        }
+        
+        .price {
+            font-size: 5rem;
+            font-weight: 800;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+        
+        .guarantee {
+            background: #0f1014;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            color: #000;
+            padding: 30px 40px;
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .footer {
+            background: #0a0b0f;
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.3rem; }
+            .features-grid, .modules-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .price { font-size: 3rem; }
+        }
+        
+        .bonus-section {
+            background: #1a1b2e;
+            padding: 80px 0;
+        }
+        
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .bonus-item {
+            background: #2a2d3a;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>JENKS ALPHA TRADING MASTERY</h1>
+            <p class="subtitle">Master the 13 institutional-grade strategies that generated consistent alpha in all market conditions</p>
+            
+            <div class="price-highlight">Complete Course: $297</div>
+            
+            <a href="#pricing" class="cta-button">🚀 Master Trading Now</a>
+            
+            <p style="margin-top: 30px; color: #888; font-size: 1.1rem;">
+                ✅ 11+ Hours of Video Content | ✅ Downloadable Resources | ✅ Private Community Access | ✅ 30-Day Guarantee
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What You'll Master</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3>13 Proven Strategies</h3>
+                    <p>Master the complete Jenks trading arsenal: Trump trades, Pelosi plays, institutional flow following, options strategies, and more.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>AI-Enhanced Signals</h3>
+                    <p>Learn how to combine traditional analysis with modern AI tools for superior market intelligence and timing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>Professional Risk Management</h3>
+                    <p>Institutional-grade position sizing, correlation analysis, and portfolio heat management to protect your capital.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Real Performance Data</h3>
+                    <p>See actual backtests, live performance metrics, and transparent results from each strategy implementation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Multi-Signal Confluence</h3>
+                    <p>Advanced techniques for combining signals across strategies to identify the highest-probability trades.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💼</span>
+                    <h3>Professional Tools</h3>
+                    <p>Complete technology stack setup, screening tools, alert systems, and portfolio tracking for serious traders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modules">
+        <div class="container">
+            <h2 class="section-title">Complete Course Modules</h2>
+            
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">1</div>
+                    <h3>Foundations of Alpha Trading</h3>
+                    <p><strong>2 hours • 8 lessons</strong></p>
+                    <p>Master the core philosophy, market structure understanding, and risk management principles that separate professional traders.</p>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-number">2</div>
+                    <h3>Signal Intelligence Systems</h3>
+                    <p><strong>3 hours • 12 lessons</strong></p>
+                    <p>Deep dive into options flow reading, sentiment analysis, fundamental catalysts, and technical analysis 2.0.</p>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-number">3</div>
+                    <h3>The Jenks Strategies (Advanced)</h3>
+                    <p><strong>4 hours • 16 lessons</strong></p>
+                    <p>Complete breakdown of all 13 strategies including Trump trades, Pelosi plays, institutional following, and systematic approaches.</p>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-number">4</div>
+                    <h3>Building Your Trading System</h3>
+                    <p><strong>2 hours • 8 lessons</strong></p>
+                    <p>Technology setup, capital allocation, performance tracking, and scaling from $10K to $1M+ accounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bonus-section">
+        <div class="container">
+            <h2 class="section-title">Exclusive Bonus Materials</h2>
+            
+            <div class="bonus-grid">
+                <div class="bonus-item">
+                    <h3>🎁 Strategy Cheat Sheets</h3>
+                    <p>Quick-reference guides for all 13 strategies with entry/exit criteria and risk parameters.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>📊 Position Sizing Calculator</h3>
+                    <p>Excel spreadsheet with automated position sizing based on account size, strategy, and risk tolerance.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>📋 Watchlist Templates</h3>
+                    <p>Pre-configured watchlists for each strategy with the exact tickers and screening criteria used.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>💬 Private Discord Community</h3>
+                    <p>Exclusive access to chat with other students, share trades, and get feedback on your analysis.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>🎥 Weekly Live Q&A</h3>
+                    <p>Direct access to strategy updates, market analysis, and answers to your specific questions.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>📈 Performance Dashboard</h3>
+                    <p>Real-time tracking of all strategy performances with detailed analytics and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">Course Stats</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>11+</h3>
+                    <p>Hours of Premium Content</p>
+                </div>
+                <div class="stat-item">
+                    <h3>44</h3>
+                    <p>Individual Video Lessons</p>
+                </div>
+                <div class="stat-item">
+                    <h3>13</h3>
+                    <p>Proven Trading Strategies</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Downloadable Resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Investment</h2>
+            
+            <div class="pricing-card">
+                <div class="price">$297</div>
+                <p style="font-size: 1.3rem; color: #b3b3b3; margin-bottom: 30px;">Complete Trading Mastery Course</p>
+                
+                <ul style="text-align: left; margin-bottom: 40px; line-height: 2.2;">
+                    <li>✅ 11+ hours of premium video content</li>
+                    <li>✅ All 13 institutional-grade strategies</li>
+                    <li>✅ Complete implementation guides</li>
+                    <li>✅ Downloadable tools & resources</li>
+                    <li>✅ Position sizing calculator</li>
+                    <li>✅ Strategy cheat sheets & templates</li>
+                    <li>✅ Private Discord community access</li>
+                    <li>✅ Weekly live Q&A sessions</li>
+                    <li>✅ Strategy updates & improvements</li>
+                    <li>✅ Lifetime access to materials</li>
+                    <li>✅ 30-day money-back guarantee</li>
+                </ul>
+                
+                <a href="mailto:course@jenksalpha.com?subject=Trading%20Course%20Purchase&body=I%20want%20to%20purchase%20the%20Jenks%20Alpha%20Trading%20Mastery%20course%20for%20%24297.%0A%0AName%3A%20%0AEmail%3A%20%0APayment%20method%3A%20" class="cta-button" style="width: 80%;">
+                    Enroll Now 🚀
+                </a>
+                
+                <p style="margin-top: 30px; font-size: 1rem; color: #666;">
+                    Payment plans available: 3 payments of $99<br>
+                    Questions? Email: course@jenksalpha.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">30-DAY<br>GUARANTEE</div>
+            <h3 style="font-size: 2rem; margin-bottom: 20px;">Risk-Free Investment</h3>
+            <p style="font-size: 1.3rem; color: #b3b3b3; max-width: 600px; margin: 0 auto;">
+                Try the complete course for 30 days. If you don't see improvement in your trading or aren't completely satisfied, 
+                get a full refund - no questions asked. Your investment is 100% protected.
+            </p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <h3 style="margin-bottom: 20px;">Ready to Trade Like a Pro?</h3>
+            <p style="font-size: 1.2rem; color: #b3b3b3; margin-bottom: 30px;">
+                Join hundreds of traders who've transformed their results with Jenks Alpha strategies.
+            </p>
+            
+            <a href="#pricing" class="cta-button">Start Your Trading Transformation 🚀</a>
+            
+            <p style="margin-top: 40px; color: #666;">
+                &copy; 2026 Jenks Alpha Trading. Professional trading education.<br>
+                Contact: <a href="mailto:course@jenksalpha.com" style="color: #4ecdc4;">course@jenksalpha.com</a>
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
