@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JenksAlpha - Professional Algorithmic Trading Solutions</title>
+    <meta name="description" content="Enterprise-grade trading bots and AI strategies. Built by professionals managing $30,000+ live portfolios. 70%+ win rate proven systems.">
+    
+    <!-- Professional Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo i {
+            font-size: 28px;
+            color: #ffffff;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+        
+        .hero-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #b0b0b0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .trust-item i {
+            font-size: 20px;
+            color: #4ade80;
+        }
+        
+        .trust-item span {
+            font-weight: 600;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .coming-soon {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.3);
+        }
+        
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: white;
+        }
+        
+        .product-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .product-card p {
+            color: #b0b0b0;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .product-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+        
+        .product-features li i {
+            color: #4ade80;
+            width: 20px;
+        }
+        
+        .product-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #667eea;
+            margin: 25px 0;
+        }
+        
+        .contact-info {
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content {
+                padding: 40px 30px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>JenksAlpha</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>JenksAlpha</h1>
+                <div class="subtitle">Professional Algorithmic Trading Solutions</div>
+                <p class="description">
+                    The ONLY trading systems built by professionals managing real $30,000+ live portfolios. 
+                    Get battle-tested strategies with proven 70%+ win rates.
+                </p>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-target"></i>
+                        <span>70%+ Win Rate</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>$30K+ Live Results</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>60-Day Guarantee</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-download"></i>
+                        <span>Instant Access</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View Trading Systems
+                    </a>
+                </div>
+                
+                <div class="coming-soon">
+                    🚀 Payment System Launching Soon - Contact for Early Access
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Professional Trading Systems</h2>
+            
+            <div class="products-grid">
+                <!-- Trading Bot Kit -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Trading Bot Starter Kit</h3>
+                    <p>Complete Python trading bot with 5 proven strategies, advanced risk management, and comprehensive video training course.</p>
+                    
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> 5 Battle-tested strategies</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced risk management</li>
+                        <li><i class="fas fa-check-circle"></i> 12+ hours video training</li>
+                        <li><i class="fas fa-check-circle"></i> Complete source code</li>
+                        <li><i class="fas fa-check-circle"></i> Private Discord community</li>
+                        <li><i class="fas fa-check-circle"></i> 6 months of updates</li>
+                    </ul>
+                    
+                    <div class="product-price">$149</div>
+                    
+                    <div class="contact-info">
+                        <strong>Contact for Purchase:</strong><br>
+                        support@jenksalpha.com
+                    </div>
+                </div>
+                
+                <!-- AI Prompts -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Trading Prompts</h3>
+                    <p>50+ professional ChatGPT prompts for market analysis, strategy development, and risk management optimization.</p>
+                    
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> 50+ proven prompts</li>
+                        <li><i class="fas fa-check-circle"></i> Market analysis templates</li>
+                        <li><i class="fas fa-check-circle"></i> Strategy development guides</li>
+                        <li><i class="fas fa-check-circle"></i> Risk assessment tools</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world examples</li>
+                        <li><i class="fas fa-check-circle"></i> Monthly prompt updates</li>
+                    </ul>
+                    
+                    <div class="product-price">$67</div>
+                    
+                    <div class="contact-info">
+                        <strong>Contact for Purchase:</strong><br>
+                        support@jenksalpha.com
+                    </div>
+                </div>
+                
+                <!-- Voice Trading Course -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice Trading Course</h3>
+                    <p>Revolutionary voice-controlled trading platform with hands-free portfolio management and enterprise-grade features.</p>
+                    
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> Voice command trading</li>
+                        <li><i class="fas fa-check-circle"></i> Hands-free portfolio management</li>
+                        <li><i class="fas fa-check-circle"></i> Enterprise-grade platform</li>
+                        <li><i class="fas fa-check-circle"></i> Complete course curriculum</li>
+                        <li><i class="fas fa-check-circle"></i> Bonus software tools</li>
+                        <li><i class="fas fa-check-circle"></i> 1-year platform access</li>
+                    </ul>
+                    
+                    <div class="product-price">$297</div>
+                    
+                    <div class="contact-info">
+                        <strong>Contact for Purchase:</strong><br>
+                        support@jenksalpha.com
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;" id="contact">
+            <h3 style="color: #667eea; margin-bottom: 20px;">Ready to Start Trading?</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Contact us for immediate access to our professional trading systems</p>
+            <a href="mailto:support@jenksalpha.com" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Contact Now - support@jenksalpha.com
+            </a>
+        </div>
+    </section>
+</body>
+</html>
